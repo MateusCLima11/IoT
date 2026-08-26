@@ -1,12 +1,13 @@
 notas = []
 
-for i in range(1, 9):
-    nota = float(input(f"Digite a nota do {i}º aluno: "))
-    notas.append(nota)
+for x in range(8):
+    n = float(input(f'Digite a {x+1}ª nota?  '))
+    notas.append(n)
 
-media = sum(notas) / len(notas)
+media = sum(notas)/len(notas)
 
-notas_acima_da_media = [nota for nota in notas if nota > media]
+for espiao in notas:
+    if(espiao>=media):
+        print(espiao,end='-')
 
-print(f"\nMédia aritmética da turma: {media:.2f}")
-print(f"Notas acima da média: {notas_acima_da_media}")
+print(f'A média da turma é {media:.1f}')
