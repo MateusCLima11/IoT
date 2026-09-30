@@ -27,7 +27,7 @@ def calcular():
         resultado.configure(text='Digite somente números válidos.', text_color= 'orange')
 
 # janela ------------------
-janela = ctk.CTk()
+janela = ctk.CTk('#1c1c1b')
 janela.geometry('600x450')
 janela.resizable(False, False)
 janela.title('Sistema Escolar 2026')
@@ -40,7 +40,7 @@ janela.iconbitmap('ic_school_128_28729.ico')
 titulo = ctk.CTkLabel(janela,
                     text='Sistema Escolar',
                     text_color='yellow',
-                    font=('arial', 50))
+                    font=('arial', 50, 'bold'))
 titulo.pack()
 
 nota1 = ctk.CTkEntry(janela,
@@ -72,6 +72,7 @@ botao = ctk.CTkButton(janela,
                     text_color='yellow',
                     cursor = 'hand2',
                     font=('arial',30),
+                    hover_color="#053105",
                     command=calcular)
 botao.pack(pady=10)
 
